@@ -9,7 +9,7 @@ public class Main {
             try {
                 System.out.println("What is the beast's favorite drink?(Available coffee: (1)Latte, (2)Cappuccino, (3)Macchiato) ");
                 option = scanner.nextInt();
-                System.out.println("How would you like your coffee to be prepared?(Available methods: (1)Drip Brew, (2)Espresso Machine, (3)French Press) ");
+                System.out.println("How would the beast like his/her coffee to be prepared?(Available methods: (1)Drip Brew, (2)Espresso Machine, (3)French Press) ");
                 method = scanner.nextInt();
             } catch (InputMismatchException i) {
                 System.out.println("An error occurred, please try agan.");
