@@ -3,9 +3,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        int ctr = 0;
+        Scanner scanner = new Scanner(System.in);
         while(true) {
-            Scanner scanner = new Scanner(System.in);
-            int option = 0, method = 0;
+            ctr++;
+            int option, method;
             try {
                 System.out.println("What is the beast's favorite drink?(Available coffee: (1)Latte, (2)Cappuccino, (3)Macchiato) ");
                 option = scanner.nextInt();
@@ -15,7 +17,7 @@ public class Main {
                 System.out.println("An error occurred, please try agan.");
                 return;
             }
-            BridgeGuardCoffeeLover b = null;
+            BridgeGuardCoffeeLover b;
 
             if (option == 1) {
                 if (method == 1) {
@@ -51,6 +53,16 @@ public class Main {
                     b.ikuzo();
                 }
             } else System.out.println("Item unavailable!");
+
+            if(ctr == 3) {
+                System.out.println("Does the beast want more coffee? (1/0)");
+                int input = scanner.nextInt();
+                if(input == 0) {
+                    System.out.println("Enjoy your coffee!");
+                    break;
+                }
+                ctr = 0;
+            }
         }
     }
 }
